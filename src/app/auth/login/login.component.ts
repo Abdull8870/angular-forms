@@ -15,8 +15,8 @@ onSubmit(formData: NgForm) {
   if(formData.form.invalid){
     return;
   }
-
-  console.log(formData.form.value.email);
+ const email=formData.form.value.email;
+ const password=formData.form.value.password;
 
  }
 
