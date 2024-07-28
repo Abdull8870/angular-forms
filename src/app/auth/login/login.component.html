@@ -21,10 +21,18 @@
 
     <button class="button">Login</button>
   </div>
-  @if(email.touched && password.touched && form.form.invalid){
+  @if(email.touched && email.dirty && email.invalid ){
     <div>
       <p class="control-error">
-        Invalid inputs entered..!!!
+        Invalid Email format: Enter a Valid Email
+      </p>
+    </div>
+  }
+
+  @if(password.touched && password.dirty && password.invalid){
+    <div>
+      <p class="control-error">
+        Invalid Password Entered: Password must be atleaset 5 Characters
       </p>
     </div>
   }
